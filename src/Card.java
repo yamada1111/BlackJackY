@@ -11,6 +11,7 @@ public String[] getsuit() {
 public int[] getnumber() {
 	return this.number;
 }
+
 public void  cardCheck(boolean faceUp) {
 		if(faceUp) {
 			System.out.println(suit + "| " + rank);
