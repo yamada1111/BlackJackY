@@ -5,7 +5,12 @@ public class Card {
 	String rank;
 	boolean faceUp;
 
-
+public String[] getsuit() {
+	return this.suit;
+}
+public int[] getnumber() {
+	return this.number;
+}
 public void  cardCheck(boolean faceUp) {
 		if(faceUp) {
 			System.out.println(suit + "| " + rank);
