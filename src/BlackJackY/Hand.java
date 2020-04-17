@@ -9,26 +9,26 @@ public class Hand {
 	Hand(){
 		cards = new ArrayList<Card>();
 	}
-	void Add(Card card) {
+	void add(Card card) {
 		cards.add(card);
 	}
-	int ComputeScore() {
+	int computeScore() {
 		int sum = 0;
 		for(Card i:cards) {
 			if(i.num > 10)	sum +=10;
 			else			sum +=i.num;
 		}
-		if(ContainsAce() && sum <=11) sum +=10;
+		if(containsAce() && sum <=11) sum +=10;
 		return sum;
 	}
-	private boolean ContainsAce() {
+	private boolean containsAce() {
 		for(Card i:cards) {
 			if(i.num ==1)return true;
 		}
 		return false;
 
 	}
-	void FaceUpAll() {
+	void faceUpAll() {
 		for(Card i:cards) {
 			i.FaceUp = true;
 		}
