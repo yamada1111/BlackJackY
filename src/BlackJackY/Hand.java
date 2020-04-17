@@ -15,15 +15,15 @@ public class Hand {
 	int computeScore() {
 		int sum = 0;
 		for(Card i:cards) {
-			if(i.num > 10)	sum +=10;
-			else			sum +=i.num;
+			if(i.getNo() > 10)	sum +=10;
+			else			sum +=i.getNo();
 		}
 		if(containsAce() && sum <=11) sum +=10;
 		return sum;
 	}
 	private boolean containsAce() {
 		for(Card i:cards) {
-			if(i.num ==1)return true;
+			if(i.getNo() ==1)return true;
 		}
 		return false;
 

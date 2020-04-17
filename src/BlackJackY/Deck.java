@@ -21,7 +21,7 @@ public class Deck {
 	private List<Card> createCards() {
 		List<Card> list = new ArrayList<Card>();
 
-		for(String s:Card.suit) {
+		for(String s:Card.SUIT) {
 			for(int i=0;i<13;i++) {
 				list.add(new Card(s,i));
 			}

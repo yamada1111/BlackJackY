@@ -22,13 +22,13 @@ public class Player {
 	}
 	void take() {
 		Card card = deck.pop();
-		card.faceUp(true);
+		card.setFaceUp(true);
 		showTookCard(card);
 		hand.add(card);
 	}
 	void take(boolean b) {
 		Card card = deck.pop();
-		card.faceUp(b);
+		card.setFaceUp(b);
 		showTookCard(card);
 		hand.add(card);
 	}
