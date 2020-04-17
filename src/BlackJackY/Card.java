@@ -38,14 +38,8 @@ public String Rank() {
 }
 
 public Card(String suit, int no) {
-	while(true) {
-		System.out.println("エラーです");
 		this.No = no;
 		this.Suit = suit;
-		if(no > 1 || 13 > no) {
-			break;
-		}
-	}
 }
 @Override
 public String toString() {
@@ -54,13 +48,12 @@ public String toString() {
 	if(FaceUp) {
 		 suit = Suit.toString();
 		 rank = Rank();
-		System.out.println(suit + "|" + rank);
+		return "["+suit + "|" + rank+"]";
 	} else {
 		 suit = "???????";
 		 rank = "??";
-		System.out.println(suit + "|" + rank);
+		return "["+suit + "|" + rank+"]";
 	}
-	return suit + rank;
 }
 
 }
